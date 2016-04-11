@@ -2,11 +2,23 @@
 
 [![Build Status][travis-image]][travis-url]
 
-Simple REST API for the droidgrid module. This is just an exercise - don't use any of this anywhere near a production environment.
+Simple REST API for the droidgrid module. Make sure to see (https://github.com/claudiorodriguez/exercise-droidgrid-core) first. This is just an exercise - don't use any of this anywhere near a production environment.
 
 ## Installation
 
 `git clone` this repo into a folder, then `npm install` and `npm start` when done.
+
+Make a POST request to `/grid` with a `text` field in the body, e.g.
+
+```
+5 5
+1 2 N
+LMLMLMLMM
+3 3 E
+MMRMMRMRRM
+```
+
+Note the use of spaces and newlines as separators.
 
 ## Testing
 
