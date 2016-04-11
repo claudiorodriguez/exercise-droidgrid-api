@@ -1,0 +1,35 @@
+{
+  "name": "exercise-droidgrid-api",
+  "version": "0.0.1",
+  "description": "Simple REST API for the droidgrid module",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/claudiorodriguez/exercise-droidgrid-api.git"
+  },
+  "keywords": [
+    "exercise",
+    "droidgrid",
+    "api",
+    "rest"
+  ],
+  "author": "Claudio Rodriguez <cjrodr@yahoo.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/claudiorodriguez/exercise-droidgrid-api/issues"
+  },
+  "homepage": "https://github.com/claudiorodriguez/exercise-droidgrid-api#readme",
+  "dependencies": {
+    "boom": "^3.1.2",
+    "exercise-droidgrid-core": "git+https://github.com/claudiorodriguez/exercise-droidgrid-core.git",
+    "hapi": "^13.3.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5"
+  }
+}
