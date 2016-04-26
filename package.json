@@ -1,6 +1,6 @@
 {
   "name": "exercise-droidgrid-api",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Simple REST API for the droidgrid module",
   "main": "index.js",
   "scripts": {

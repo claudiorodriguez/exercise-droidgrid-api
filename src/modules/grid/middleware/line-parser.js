@@ -1,5 +1,7 @@
 'use strict';
 const DroidGrid = require('exercise-droidgrid-core');
+const Droid = DroidGrid.Droid;
+const Grid = DroidGrid.Grid;
 const lineSeparator = '\n';
 const itemSeparator = ' ';
 
@@ -34,7 +36,7 @@ module.exports = {
         }
         const width = parseInt(items[0], 10) + 1;
         const height = parseInt(items[1], 10) + 1;
-        grid = new DroidGrid({ width: width, height: height });
+        grid = new Grid(width, height);
       } else {
         if (items.length === 3) {
           // Droid placement line
@@ -42,7 +44,7 @@ module.exports = {
           droidY = parseInt(items[1], 10);
           droidFacing = facings[items[2]];
           if (droidX && droidY && droidFacing) {
-            grid.placeDroid(droidX, droidY, droidFacing);
+            grid.add(new Droid(droidX, droidY, droidFacing));
           } else {
             throw new Error('Invalid line: ' + lines[i]);
           }
@@ -54,7 +56,7 @@ module.exports = {
             }
             return actions[char];
           });
-          grid.moveDroid(actionChars);
+          grid.execute(actionChars);
         } else {
           throw new Error('Invalid line (unrecognized): ' + lines[i]);
         }
@@ -62,6 +64,6 @@ module.exports = {
     }
 
     // Return a grid snapshot
-    return grid.snapshot();
+    return grid.dump();
   }
 }
